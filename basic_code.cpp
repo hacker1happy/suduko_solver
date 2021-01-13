@@ -143,19 +143,19 @@ void printGrid(int grid[N][N])
 int main()
 {
     // 0 means unassigned cells
-    int grid[N][N] = { { 3, 0, 6, 5, 0, 8, 4, 0, 0 },
-                       { 5, 2, 0, 0, 0, 0, 0, 0, 0 },
-                       { 0, 8, 7, 0, 0, 0, 0, 3, 1 },
-                       { 0, 0, 3, 0, 1, 0, 0, 8, 0 },
-                       { 9, 0, 0, 8, 6, 3, 0, 0, 5 },
-                       { 0, 5, 0, 0, 9, 0, 6, 0, 0 },
-                       { 1, 3, 0, 0, 0, 0, 2, 5, 0 },
-                       { 0, 0, 0, 0, 0, 0, 0, 7, 4 },
-                       { 0, 0, 5, 2, 0, 6, 3, 0, 0 } };
-    if (SolveSudoku(grid) == true)
+    int grid[N][N];
+    cout<<"Enter Your Suduko here (in row-wise manner) : \n\n"<<;
+    for(int i=0;i<9;i++){
+        for(int j=0;j<9;j++)
+            cin>>gird[i][j];
+    }
+
+    if (SolveSudoku(grid) == true){
+        cout<<"\n Your suduko is : \n";
         printGrid(grid);
-    else
-        cout << "No solution exists";
+    }
+     else
+        cout << "\n No solution exists for the given suduko";
  
     return 0;
 }
